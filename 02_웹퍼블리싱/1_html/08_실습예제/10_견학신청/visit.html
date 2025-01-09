@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>견학신청하기</title>
+</head>
+
+<body>
+    <h1>견학신청하기</h1>
+    <p>현장 견학을 통해 롯데푸드 제품을 직접 확인해 보실 수 있습니다</p>
+    <h2>개인정보동의서</h2>
+    <p>이용자 본인은 아래의 개인정보가 사실임을 확인하며, 아래와 같이 개인정보를 수집 및 이용하는 것에 동의합니다.</p>
+    <ol>
+        <li><b>개인정보의 수집 및 이용목적</b><br>롯데푸드(주) 견학신청서 작성에 따른 본인 식별을 위하여 이용자의 개인정보를 수집하고 있습니다.</li>
+        <li><b>수집하는 개인정보의 항목</b>
+            <ul>
+                <li>신청자, 이메일, 연락처, 주소, 서비스이용과정이나 사업처리 과정에서 아래와 같은 정보들이 생성되어 수집될 수 있습니다.</li>
+                <li>서비스이용기록, 접속로그, 쿠키, 접속IP정보</li>
+            </ul>
+        </li>
+        <li><b>개인정보의 보유 및 이용기간</b><br>원칙적으로 개인정보의 수집목적 또는 이용 목적이 달성되면 지체 없이 파기합니다.</li>
+    </ol>
+
+    <form action="">
+        <fieldset>
+            <legend>개인정보동의</legend>
+            <label>개인정보동의 : <input type="radio" name="1_1" value="no">동의하지 않음 <input type="radio" name="1_1"
+                    value="yes">동의함</label>
+        </fieldset>
+    </form>
+    <h2>견학신청서작성</h2>
+    <form>
+        <fieldset>
+            <legend>견학신청서작성</legend>
+            <table border="1">
+                <tr>
+                    <th>신청자</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td><label>
+                            <select>
+                                <option value="010" selected>010</option>
+                                <option value="011">011</option>
+                                <option value="017">017</option>
+                                <option value="016">016</option>
+                            </select>
+                            - </label><input type="tel"> - <input type="tel"></td>
+                </tr>
+                <tr>
+                    <th>이메일</th>
+                    <td><label><input type="email"> 예시 : test@lotte.com</label></td>
+                </tr>
+                <tr>
+                    <th rowspan="2">주소</th>
+                    <td><input type="search"> <input type="submit" value="우편번호"> </td>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th>견학 인원</th>
+                    <td><input type="text"> ※공장 견학 인원은 20~40명으로 제한되니 양해부탁 드립니다. </td>
+                </tr>
+                <tr>
+                    <th>견학 연령</th>
+                    <td>
+                        <input type="checkbox">10대
+                        <input type="checkbox">20대
+                        <input type="checkbox">30대
+                        <input type="checkbox">40대
+                        <input type="checkbox">50대
+                    </td>
+                </tr>
+                <tr>
+                    <th>견학 시간대</th>
+                    <td><input type="radio" name="time" value="10_12"> 10:00 ~ 12:00
+                        <input type="radio" name="time" value="13_15"> 13:00 ~ 15:00
+                        <input type="radio" name="time" value="15_17"> 15:00 ~ 17:00
+                    </td>
+                </tr>
+                <tr>
+                    <th>견학 목적</th>
+                    <td><textarea cols="80" rows="4"></textarea></td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" value="신청">
+            <input type="reset" value="취소">
+        </fieldset>
+    </form>
+</body>
+
+</html>

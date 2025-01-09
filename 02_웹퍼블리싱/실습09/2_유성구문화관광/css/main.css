@@ -1,0 +1,300 @@
+@charset "urf-8";
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#wrap {
+    margin: 0 auto;
+    background: url('../images/main_bg.png') no-repeat center 0;
+}
+
+/* header */
+#header {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-x: hidden;
+    margin-bottom: 50px;
+}
+
+#header h1 a {
+    font-size: 30px;
+    padding: 30px 0;
+    display: block;
+    color: #fff;
+}
+
+#header .gnb>li {
+    width: calc(100%/6);
+    float: left;
+}
+
+
+
+#header .gnb>li>a {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    display: block;
+    padding: 20px 0 20px;
+    transition: background 0.5s, color 0.5s;
+}
+
+#header .gnb>li:hover a {
+    background: rgba(255, 255, 255, 0.2);
+    color: #1053b8;
+}
+
+/* main */
+/* main_visual */
+
+#main_visual {
+    text-align: center;
+}
+
+#main_visual .mv_img img {
+    width: 100%;
+    border-radius: 0 0 150px 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+#main_visual .mv_img img:hover {
+    transform: scale(1.03, 1.03);
+}
+
+/* hobby */
+
+#hobby {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+#hobby h2 {
+    margin-top: 150px;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+#hobby h2 span {
+    font-weight: 700;
+}
+
+#hobby .inner>p {
+    color: #999999;
+    font-size: 18px;
+    padding-bottom: 70px;
+}
+
+#hobby .travel_list li {
+    width: 280px;
+    height: 437px;
+    padding: 250px 0 40px;
+    float: left;
+    margin-right: 26px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+}
+
+#hobby .travel_list li:hover {
+    transform: translateY(-30px);
+}
+
+#hobby .travel_list li:last-child {
+    margin-right: 0;
+}
+
+#hobby .travel_list li:nth-child(1) {
+    background: url('../images/course_01.jpg') no-repeat;
+    background-size: 100%;
+}
+
+#hobby .travel_list li:nth-child(2) {
+    background: url('../images/course_02.jpg') no-repeat;
+    background-size: 100%;
+}
+
+#hobby .travel_list li:nth-child(3) {
+    background: url('../images/course_03.jpg') no-repeat;
+    background-size: 100%;
+}
+
+#hobby .travel_list li:nth-child(4) {
+    background: url('../images/course_04.jpg') no-repeat;
+    background-size: 100%;
+}
+
+#hobby .travel_list p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+    padding: 20px 0;
+}
+
+#hobby .travel_list li a {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: inline-block;
+    background: #ecf3fb;
+    padding: 5px 40px;
+    color: #1053b8;
+    border-radius: 50px;
+    transition: color 0.5s, background 0.5s;
+}
+
+#hobby .travel_list li a:hover {
+    color: #fff;
+    background: #1053b8;
+}
+
+/* guide */
+#guide {
+    background: #3ca479;
+    padding: 100px 0;
+}
+
+#guide .guide_txt {
+    text-align: center;
+    color: #fff;
+}
+
+
+#guide .guide_txt h2 {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+#guide .guide_txt h2 span {
+    font-weight: 700;
+}
+
+#guide .guide_txt p {
+    opacity: 0.6;
+    margin-bottom: 50px;
+}
+
+#guide .guide_list li {
+    float: left;
+    width: calc(100%/3);
+    height: 290px;
+    padding: 50px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#guide .guide_list li:nth-child(1) {
+    border-radius: 50px 0 0 0;
+    background: #cf9820 url('../images/tour1_bg.png') no-repeat 205px 65px;
+}
+
+#guide .guide_list li:nth-child(2) {
+    background: #008ce5 url('../images/tour2_bg.png') no-repeat 205px 65px;
+}
+
+#guide .guide_list li:nth-child(3) {
+    border-radius: 0 0 50px 0;
+    background: #06bfcb url('../images/tour3_bg.png') no-repeat 205px 65px;
+}
+
+#guide .guide_list li p {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 0 40px;
+}
+
+#guide .guide_list li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 40px;
+    border-radius: 50px;
+    transition: background 0.2s, color 0.2s;
+}
+
+#guide .guide_list li:nth-child(1) a {
+    text-align: center;
+    background: #bc6c05;
+    width: 300px;
+    padding: 10px 0;
+}
+
+#guide .guide_list li:nth-child(2) a {
+    background: #0070b7;
+}
+
+#guide .guide_list li:nth-child(3) a {
+    background: #0599a2;
+}
+
+
+#guide .guide_list li:nth-child(1) a:hover {
+    background: #fff;
+    color: #bc6c05;
+}
+
+#guide .guide_list li:nth-child(2) a:hover {
+    background: #fff;
+    color: #0070b7;
+}
+
+#guide .guide_list li:nth-child(3) a:hover {
+    background: #fff;
+    color: #0599a2;
+}
+
+/* footer */
+
+#footer {
+    background: #3ca479 url('../images/footer_bg.png') no-repeat center 0;
+    padding: 140px 0 50px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+#footer .footer_txt {
+    float: left;
+    font-size: 15px;
+}
+
+#footer .footer_logo {
+    padding-left: 50px;
+    float: left;
+}
+
+#footer .etc {
+    float: right;
+}
+
+#footer .etc li {
+    float: left;
+    padding-left: 20px;
+}
+
+#footer .etc li a {
+    font-size: 15px;
+    display: block;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+/* go top */
+.gotop {
+    position: fixed;
+    right: 100px;
+    bottom: 80px;
+}

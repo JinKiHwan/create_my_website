@@ -1,0 +1,7 @@
+font-family : 글꼴 패밀리명, 대표 패밀리명 ;
+font-family : "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif ;
+
+※ 대표 패밀리 : serif, sans-serif, cursive, fantasy, monospace 다섯 가지 시스템 폰트를 의미(따옴표 사용X)
+※ 폰트명을 따옴표로 처리하는 경우
+① 폰트명이 한글로 되어있을 경우
+② 영문중에서 공백을 포함한 이름일 경우

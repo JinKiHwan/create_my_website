@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+// `data-aos-*` 속성으로 요소별로 재정의할 수 있는 설정:
+offset: 120, // 원래 트리거 포인트에서 오프셋(px)
+delay: 0, // 0에서 3000 사이의 값, 단계 50ms
+duration: 400, // 0에서 3000 사이의 값, 단계 50ms
+easing: 'ease', // AOS 애니메이션의 기본 여유
+once: false, // 애니메이션이 한 번만 발생해야 하는지 여부 - 아래로 스크롤하는 동안
+mirror: false, // 요소를 지나 스크롤하는 동안 요소가 애니메이션으로 표시되어야 하는지 여부
+anchorPlacement: 'top-bottom', // 애니메이션을 트리거해야 하는 창과 관련된 요소의 위치를 정의합니다.
