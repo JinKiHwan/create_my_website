@@ -65,12 +65,32 @@ body::before {
         .wrap {
             display: flex;
             width: 100%;
+            flex-wrap: wrap;
+            position: relative;
             > div {
                 width: calc(100% / 3);
 
                 h4 {
                     margin-bottom: 0.3rem;
+                    position: relative;
+                    display: inline-block;
                 }
+            }
+
+            > div.new h4::after {
+                content: 'N';
+                background: #f00;
+                color: #fff;
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15px;
+                aspect-ratio: 1/1;
+                position: absolute;
+                right: -18px;
+                top: 1px;
+                animation: new infinite 1s steps(1);
             }
         }
 
@@ -89,4 +109,14 @@ body::before {
 footer {
     text-align: center;
     color: #fff;
+}
+
+@keyframes new {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
