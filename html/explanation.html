@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML 태그별 기본 디스플레이 속성</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                max-width: 800px;
+                margin: 20px auto;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+            }
+            th,
+            td {
+                border: 1px solid #ddd;
+                padding: 10px;
+                text-align: left;
+            }
+            th {
+                background-color: #f4f4f4;
+            }
+            .example {
+                background: #f9f9f9;
+                padding: 10px;
+                border-left: 4px solid #333;
+                margin-top: 10px;
+                margin-bottom: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML 태그별 기본 디스플레이 속성</h1>
+
+        <h2>✅ 1. 인라인 (inline) 태그</h2>
+        <p><strong>특징:</strong> 한 줄을 차지하지 않으며, 내용 크기만큼만 공간을 차지함.</p>
+        <table>
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>&lt;a&gt;</td>
+                <td>링크(anchor)</td>
+            </tr>
+            <tr>
+                <td>&lt;span&gt;</td>
+                <td>의미 없는 인라인 컨테이너</td>
+            </tr>
+            <tr>
+                <td>&lt;strong&gt;</td>
+                <td>굵게 표시</td>
+            </tr>
+            <tr>
+                <td>&lt;em&gt;</td>
+                <td>기울임(이탤릭, 강조)</td>
+            </tr>
+            <tr>
+                <td>&lt;code&gt;</td>
+                <td>코드 블록(소스 코드 강조)</td>
+            </tr>
+            <tr>
+                <td>&lt;b&gt;</td>
+                <td>굵게 표시 (의미 없음)</td>
+            </tr>
+            <tr>
+                <td>&lt;i&gt;</td>
+                <td>기울임 (의미 없음)</td>
+            </tr>
+            <tr>
+                <td>&lt;u&gt;</td>
+                <td>밑줄</td>
+            </tr>
+
+            <tr>
+                <td>&lt;small&gt;</td>
+                <td>작은 글씨</td>
+            </tr>
+            <tr>
+                <td>&lt;mark&gt;</td>
+                <td>형광펜 효과 (텍스트 강조)</td>
+            </tr>
+            <tr>
+                <td>&lt;sub&gt;</td>
+                <td>아래 첨자 (subscript)</td>
+            </tr>
+            <tr>
+                <td>&lt;sup&gt;</td>
+                <td>위 첨자 (superscript)</td>
+            </tr>
+
+            <tr>
+                <td>&lt;q&gt;</td>
+                <td>인라인 짧은 인용 (quote)</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <p>이 문장에서 <span style="color: red">이 부분</span>은 인라인입니다.</p>
+            <a href="#">이 링크도 인라인</a>
+        </div>
+
+        <h2>✅ 2. 인라인-블록 (inline-block) 태그</h2>
+        <p><strong>특징:</strong> 인라인처럼 한 줄에 배치되지만, 블록처럼 width, height 지정 가능.</p>
+        <table>
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>&lt;img&gt;</td>
+                <td>이미지(image)</td>
+            </tr>
+            <tr>
+                <td>&lt;input&gt;</td>
+                <td>입력 필드(input)</td>
+            </tr>
+            <tr>
+                <td>&lt;button&gt;</td>
+                <td>버튼(button)</td>
+            </tr>
+            <tr>
+                <td>&lt;select&gt;</td>
+                <td>드롭다운 리스트(select)</td>
+            </tr>
+            <tr>
+                <td>&lt;textarea&gt;</td>
+                <td>여러 줄 입력 필드</td>
+            </tr>
+            <tr>
+                <td>&lt;label&gt;</td>
+                <td>입력 요소와 연결(label)</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <img src="/image/bg.jpg" alt="이미지" style="width: 250px" />
+            <input type="text" placeholder="입력하세요" />
+            <button>클릭</button>
+        </div>
+
+        <h2>✅ 3. 블록 (block) 태그</h2>
+        <p><strong>특징:</strong> 한 줄을 전체 차지하며 자동으로 줄 바꿈이 됨.</p>
+        <table>
+            <tr>
+                <th>태그</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td>&lt;div&gt;</td>
+                <td>의미 없는 블록 컨테이너</td>
+            </tr>
+            <tr>
+                <td>&lt;p&gt;</td>
+                <td>단락(Paragraph)</td>
+            </tr>
+            <tr>
+                <td>&lt;h1&gt; ~ &lt;h6&gt;</td>
+                <td>제목(Heading) 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</td>
+                <td>목록(List) 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;table&gt;</td>
+                <td>표(Table) 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;form&gt;</td>
+                <td>폼(Form) 태그</td>
+            </tr>
+            <tr>
+                <td>&lt;section&gt;</td>
+                <td>문서 구획</td>
+            </tr>
+            <tr>
+                <td>&lt;article&gt;</td>
+                <td>독립적 콘텐츠 블록</td>
+            </tr>
+            <tr>
+                <td>&lt;aside&gt;</td>
+                <td>사이드 콘텐츠</td>
+            </tr>
+            <tr>
+                <td>&lt;footer&gt;</td>
+                <td>푸터(Footer)</td>
+            </tr>
+            <tr>
+                <td>&lt;header&gt;</td>
+                <td>헤더(Header)</td>
+            </tr>
+            <tr>
+                <td>&lt;nav&gt;</td>
+                <td>내비게이션(Navigation)</td>
+            </tr>
+        </table>
+
+        <div class="example">
+            <div>
+                <h1>제목입니다.</h1>
+                <p>이것은 단락입니다.</p>
+                <ul>
+                    <li>리스트 1</li>
+                    <li>리스트 2</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

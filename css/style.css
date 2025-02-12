@@ -126,3 +126,17 @@ footer {
         opacity: 1;
     }
 }
+section {
+    position: relative;
+}
+.htmltag {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-weight: 600;
+    color: purple;
+}
+
+.htmltag:hover {
+    text-decoration: underline;
+}
