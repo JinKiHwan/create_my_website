@@ -3,36 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>표 스타일링</title>
+    <title>Margin Transition Demo</title>
     <style>
-      div {
-        width: 150px;
-        height: 150px;
+      body {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
         border: 3px solid green;
+        background-color: lightgray;
+        position: relative;
+        transition: margin 0.3s ease-in-out;
       }
-
-      div.margin {
-        margin: 15px;
+      .box::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(255, 165, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
       }
-      div.margin-top {
-        margin-top: 15px;
+      .box.margin {
+        margin: 30px;
       }
-      div.margin-left {
-        margin-left: 15px;
+      .box.margin::before {
+        top: -30px;
+        left: -30px;
+        right: -30px;
+        bottom: -30px;
+        opacity: 1;
       }
-      div.margin-right {
-        margin-right: 15px;
+      .box.margin-left {
+        margin: 0;
+        margin-left: 30px;
       }
-      div.margin-bottom {
-        margin-bottom: 15px;
+      .box.margin-left::before {
+        left: -30px;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        opacity: 1;
+      }
+      .box.margin-right {
+        margin: 0;
+        margin-right: 30px;
+      }
+      .box.margin-right::before {
+        right: -30px;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        opacity: 1;
+      }
+      .box.margin-top {
+        margin: 0;
+        margin-top: 30px;
+      }
+      .box.margin-top::before {
+        top: -30px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        opacity: 1;
+      }
+      .box.margin-bottom {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+      .box.margin-bottom::before {
+        bottom: -30px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        opacity: 1;
+      }
+      .controls button {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .controls button:hover {
+        background: #0056b3;
       }
     </style>
   </head>
   <body>
-    <div class="margin"></div>
-    <div class="margin-top"></div>
-    <div class="margin-bottom"></div>
-    <div class="margin-left"></div>
-    <div class="margin-right"></div>
+    <div class="controls">
+      <button onclick="toggleMargin('margin')">Margin</button>
+      <button onclick="toggleMargin('margin-left')">Margin Left</button>
+      <button onclick="toggleMargin('margin-right')">Margin Right</button>
+      <button onclick="toggleMargin('margin-top')">Margin Top</button>
+      <button onclick="toggleMargin('margin-bottom')">Margin Bottom</button>
+    </div>
+    <div class="container">
+      <div class="box" id="box1"></div>
+      <div class="box" id="box2"></div>
+      <div class="box" id="box3"></div>
+    </div>
+    <script>
+      function toggleMargin(type) {
+        const boxes = document.querySelectorAll('.box');
+
+        boxes.forEach((box) => {
+          if (box.classList.contains(type)) {
+            box.classList.remove(type);
+          } else {
+            box.classList.remove('margin', 'margin-left', 'margin-right', 'margin-top', 'margin-bottom');
+            box.classList.add(type);
+          }
+        });
+      }
+    </script>
   </body>
 </html>

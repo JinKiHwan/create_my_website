@@ -3,39 +3,124 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>표 스타일링</title>
+    <title>Padding Transition Demo</title>
     <style>
-      div {
-        display: inline-block;
-        border: 1px solid #f00;
-        margin-bottom: 30px;
-        margin-right: 30px;
+      body {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
       }
       p {
         margin: 0;
+        background: #fff;
+        font-size: 32px;
       }
-      div.padding {
+      .box {
+        border: 3px solid green;
+        position: relative;
+        transition: padding 0.3s ease-in-out;
+      }
+      .box::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background-color: rgba(26, 237, 2, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .box.padding {
         padding: 30px;
       }
-      div.padding-left {
+      .box.padding::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 1;
+      }
+      .box.padding-left {
         padding-left: 30px;
       }
-      div.padding-right {
+      .box.padding-left::before {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        opacity: 1;
+      }
+      .box.padding-right {
         padding-right: 30px;
       }
-      div.padding-top {
+      .box.padding-right::before {
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 30px;
+        opacity: 1;
+      }
+      .box.padding-top {
         padding-top: 30px;
       }
-      div.padding-bottom {
+      .box.padding-top::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        opacity: 1;
+      }
+      .box.padding-bottom {
         padding-bottom: 30px;
+      }
+      .box.padding-bottom::before {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 30px;
+        opacity: 1;
+      }
+      .controls button {
+        margin: 5px;
+        padding: 10px;
+        border: none;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+      .controls button:hover {
+        background: #0056b3;
       }
     </style>
   </head>
   <body>
-    <div class="padding"><p>안녕하세요</p></div>
-    <div class="padding-left"><p>안녕하세요</p></div>
-    <div class="padding-right"><p>안녕하세요</p></div>
-    <div class="padding-top"><p>안녕하세요</p></div>
-    <div class="padding-bottom"><p>안녕하세요</p></div>
+    <div class="controls">
+      <button onclick="togglePadding('padding')">Padding</button>
+      <button onclick="togglePadding('padding-left')">Padding Left</button>
+      <button onclick="togglePadding('padding-right')">Padding Right</button>
+      <button onclick="togglePadding('padding-top')">Padding Top</button>
+      <button onclick="togglePadding('padding-bottom')">Padding Bottom</button>
+    </div>
+    <div class="container">
+      <div class="box" id="box1"><p>Box 1</p></div>
+      <div class="box" id="box2"><p>Box 2</p></div>
+      <div class="box" id="box3"><p>Box 3</p></div>
+    </div>
+    <script>
+      function togglePadding(type) {
+        const boxes = document.querySelectorAll('.box');
+
+        boxes.forEach((box) => {
+          if (box.classList.contains(type)) {
+            box.classList.remove(type);
+          } else {
+            box.classList.remove('padding', 'padding-left', 'padding-right', 'padding-top', 'padding-bottom');
+            box.classList.add(type);
+          }
+        });
+      }
+    </script>
   </body>
 </html>
