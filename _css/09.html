@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Family 적용 방법</title>
+
+    <!-- 1. Link 방식 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- 2. Import 방식 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+    </style>
+
+    <!-- 3. WOFF 파일 방식 -->
+    <style>
+      @font-face {
+        font-family: 'CustomFont';
+        src: url('fonts/CustomFont.woff2') format('woff2'), url('fonts/CustomFont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 800px;
+        margin: auto;
+      }
+      .box {
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: left;
+      }
+      .box h2 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        color: #333;
+      }
+      .box p {
+        margin: 5px 0;
+        font-size: 1rem;
+        color: #555;
+      }
+      .example-text {
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #eee;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      .link-font {
+        font-family: 'Roboto', sans-serif;
+      }
+      .import-font {
+        font-family: 'Open Sans', sans-serif;
+      }
+      .woff-font {
+        font-family: 'CustomFont', sans-serif;
+      }
+      pre {
+        background-color: #282c34;
+        color: #abb2bf;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS에서 폰트 적용 방법</h1>
+    <div class="container">
+      <div class="box link-font">
+        <h2>1. Link 방식</h2>
+        <p>Google Fonts 등의 외부 폰트를 &lt;link&gt; 태그로 불러오는 방식</p>
+        <p>장점: 간편하고 CDN을 활용하여 로딩 속도가 빠름</p>
+        <p>단점: 인터넷이 필요함</p>
+        <pre>
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"&gt;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}</pre
+        >
+        <div class="example-text">이것은 Roboto 폰트입니다.</div>
+      </div>
+
+      <div class="box import-font">
+        <h2>2. Import 방식</h2>
+        <p>@import를 사용하여 CSS 파일 내에서 폰트를 불러오는 방식</p>
+        <p>장점: CSS 파일에서 관리 가능</p>
+        <p>단점: 추가적인 HTTP 요청으로 인해 로딩 속도가 느릴 수 있음</p>
+        <pre>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}</pre
+        >
+        <div class="example-text">이것은 Open Sans 폰트입니다.</div>
+      </div>
+
+      <div class="box woff-font">
+        <h2>3. WOFF 파일 방식</h2>
+        <p>로컬 폰트 파일(.woff, .woff2)을 직접 적용하는 방식</p>
+        <p>장점: 인터넷 연결 없이 사용 가능</p>
+        <p>단점: 서버에 폰트 파일을 직접 업로드해야 함</p>
+        <pre>
+@font-face {
+  font-family: 'CustomFont';
+  src: url('fonts/CustomFont.woff2') format('woff2'),
+       url('fonts/CustomFont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'CustomFont', sans-serif;
+}</pre
+        >
+        <div class="example-text">이것은 CustomFont 폰트입니다.</div>
+      </div>
+    </div>
+  </body>
+</html>
