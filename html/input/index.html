@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Input 태그 예제</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                line-height: 1.6;
+            }
+            input,
+            select {
+                display: block;
+                margin-bottom: 10px;
+                padding: 5px;
+                width: 100%;
+                max-width: 300px;
+            }
+            label {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/">뒤로가기</a>
+        <h1>📌 Input 태그 예제</h1>
+        <p>
+            `input` 태그는 사용자로부터 데이터를 입력받는 HTML 요소입니다. 다양한 `type` 속성을 사용하여 입력 방식을
+            지정할 수 있습니다.
+        </p>
+
+        <h2>📝 기본 입력 필드</h2>
+        <label for="text">Text (기본 입력)</label>
+        <input type="text" id="text" placeholder="텍스트를 입력하세요" />
+
+        <label for="password">Password (비밀번호 입력)</label>
+        <input type="password" id="password" placeholder="비밀번호 입력" />
+
+        <label for="email">Email (이메일 입력)</label>
+        <input type="email" id="email" placeholder="example@email.com" />
+
+        <label for="number">Number (숫자 입력)</label>
+        <input type="number" id="number" placeholder="숫자를 입력하세요" />
+
+        <label for="tel">Tel (전화번호 입력)</label>
+        <input type="tel" id="tel" placeholder="010-1234-5678" />
+
+        <h2>✅ 체크박스 & 라디오 버튼</h2>
+        <p>여러 개 선택 가능 (checkbox)</p>
+        <input type="checkbox" id="option1" />
+        <label for="option1">옵션 1</label>
+
+        <input type="checkbox" id="option2" />
+        <label for="option2">옵션 2</label>
+
+        <p>하나만 선택 가능 (radio)</p>
+        <input type="radio" id="male" name="gender" />
+        <label for="male">남성</label>
+
+        <input type="radio" id="female" name="gender" />
+        <label for="female">여성</label>
+
+        <h2>📅 날짜 & 시간 입력</h2>
+        <label for="date">Date (날짜 선택)</label>
+        <input type="date" id="date" />
+
+        <label for="datetime">Datetime-local (로컬 날짜 및 시간 선택)</label>
+        <input type="datetime-local" id="datetime" />
+
+        <label for="time">Time (시간 선택)</label>
+        <input type="time" id="time" />
+
+        <h2>🎨 색상 선택 & 파일 업로드</h2>
+        <label for="color">Color (색상 선택)</label>
+        <input type="color" id="color" />
+
+        <label for="file">File (파일 업로드)</label>
+        <input type="file" id="file" />
+
+        <h2>🔍 검색 & 범위 슬라이더</h2>
+        <label for="search">Search (검색 입력)</label>
+        <input type="search" id="search" placeholder="검색어 입력" />
+
+        <label for="range">Range (범위 선택 슬라이더)</label>
+        <input type="range" id="range" min="0" max="100" />
+
+        <h2>👀 읽기 전용 & 비활성화 예제</h2>
+        <label for="readonly">읽기 전용</label>
+        <input type="text" id="readonly" value="변경 불가" readonly />
+
+        <label for="disabled">비활성화</label>
+        <input type="text" id="disabled" value="사용 불가" disabled />
+
+        <h2>📤 폼 제출 버튼</h2>
+        <button type="submit">제출하기</button>
+    </body>
+</html>
