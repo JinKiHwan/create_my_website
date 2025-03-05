@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reset CSS란?</title>
+        <style>
+            /* 기본 스타일 (Reset 미적용) */
+            .default p {
+                font-size: 16px;
+                margin: 16px;
+                padding: 8px;
+                border: 1px solid #ccc;
+            }
+
+            /* Reset CSS 적용 */
+            .reset * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .reset p {
+                font-size: 16px;
+                border: 1px solid #ccc;
+            }
+            .reset li {
+                list-style: none;
+            }
+
+            /* 스타일 비교를 위한 레이아웃 */
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                line-height: 1.6;
+            }
+            .container {
+                display: flex;
+                gap: 20px;
+            }
+            .box {
+                flex: 1;
+                padding: 20px;
+                border: 2px solid #000;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="../index.html">뒤로가기</a>
+        <h1>🔍 Reset CSS란?</h1>
+        <p>
+            Reset CSS는 브라우저마다 다른 기본 스타일을 제거하여 스타일의 일관성을 유지하는 기법입니다.<br />
+            브라우저 기본 스타일이 다르기 때문에 같은 코드를 작성해도 결과가 달라질 수 있습니다.
+        </p>
+
+        <h2>⚖️ Reset CSS 전후 비교</h2>
+        <div class="container">
+            <div class="box default">
+                <h3>🚫 Reset CSS 미적용</h3>
+                <p>이 단락은 기본 브라우저 스타일을 따릅니다.</p>
+                <ul>
+                    <li>기본 마진 & 패딩 있음</li>
+                    <li>브라우저마다 다르게 보일 수 있음</li>
+                </ul>
+            </div>
+            <div class="box reset">
+                <h3>✅ Reset CSS 적용</h3>
+                <p>이 단락은 Reset CSS를 적용한 결과입니다.</p>
+                <ul>
+                    <li>모든 마진 & 패딩 제거</li>
+                    <li>일관된 스타일 유지</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>📌 Reset CSS 예제</h2>
+        <p>다음은 가장 기본적인 Reset CSS 코드입니다:</p>
+        <pre>
+<code>/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li,ol{
+    list-style:none;
+}
+</code>
+    </pre>
+    </body>
+</html>
