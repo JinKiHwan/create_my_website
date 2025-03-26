@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex 속성 테스트</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            h1 {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                width: 80%;
+                max-width: 600px;
+                height: 250px;
+                display: flex;
+                border: 2px solid #333;
+                background: #fff;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .box {
+                width: 80px;
+                min-height: 80px;
+                background: dodgerblue;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 5px;
+                font-size: 18px;
+                font-weight: bold;
+                border-radius: 10px;
+            }
+
+            .buttons {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .button-group {
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            button {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                background: #007bff;
+                color: white;
+                font-size: 14px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+            button:hover {
+                background: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flex 정렬 테스트</h1>
+        <div class="container">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+        </div>
+
+        <div class="buttons">
+            <h2>Justify Content</h2>
+            <div class="button-group">
+                <button onclick="setJustify('flex-start')">flex-start</button>
+                <button onclick="setJustify('center')">center</button>
+                <button onclick="setJustify('flex-end')">flex-end</button>
+                <button onclick="setJustify('space-between')">space-between</button>
+                <button onclick="setJustify('space-around')">space-around</button>
+                <button onclick="setJustify('space-evenly')">space-evenly</button>
+            </div>
+
+            <h2>Align Items</h2>
+            <div class="button-group">
+                <button onclick="setAlign('flex-start')">flex-start</button>
+                <button onclick="setAlign('center')">center</button>
+                <button onclick="setAlign('flex-end')">flex-end</button>
+                <button onclick="setAlign('stretch')">stretch</button>
+            </div>
+        </div>
+
+        <script>
+            function setJustify(value) {
+                document.querySelector('.container').style.justifyContent = value;
+            }
+
+            function setAlign(value) {
+                document.querySelector('.container').style.alignItems = value;
+            }
+        </script>
+    </body>
+</html>

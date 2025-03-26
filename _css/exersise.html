@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>영양제 추천</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                background: #f5f5f5;
+                padding: 20px;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: auto;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                text-align: center;
+                color: #2c3e50;
+                margin-bottom: 10px;
+            }
+
+            .intro {
+                text-align: center;
+                color: #555;
+                margin-bottom: 20px;
+            }
+
+            .products {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .product-card {
+                background: white;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                width: 200px;
+                text-align: center;
+            }
+
+            .product-card figure {
+                width: 100%;
+                aspect-ratio: 16/9;
+                border-radius: 5px;
+                overflow: hidden;
+                margin: 0;
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .product-card h3 {
+                font-size: 18px;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            .product-card p {
+                font-size: 14px;
+                color: #777;
+                margin-bottom: 10px;
+            }
+
+            .buy-btn {
+                display: block;
+                background: #27ae60;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                border-radius: 5px;
+                text-decoration: none;
+                margin-top: 20px;
+            }
+
+            .buy-btn:hover {
+                background: #219150;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>건강을 위한 영양제 추천</h1>
+            <p class="intro">당신의 건강을 지키는 필수 영양제, 지금 만나보세요!</p>
+
+            <div class="products">
+                <div class="product-card">
+                    <figure>
+                        <img src="/_css/img/vitamin.jpg" alt="비타민C" />
+                    </figure>
+                    <h3>비타민 C</h3>
+                    <p>면역력 강화, 피부 건강</p>
+                </div>
+
+                <div class="product-card">
+                    <figure>
+                        <img src="/_css/img/omega.jpg" alt="오메가3" />
+                    </figure>
+                    <h3>오메가-3</h3>
+                    <p>심장 건강, 두뇌 기능 개선</p>
+                </div>
+
+                <div class="product-card">
+                    <figure>
+                        <img src="/_css/img/probiotgics.jpg" alt="프로바이오틱스" />
+                    </figure>
+                    <h3>프로바이오틱스</h3>
+                    <p>장 건강, 소화 개선</p>
+                </div>
+            </div>
+
+            <a href="#" class="buy-btn">지금 구매하기</a>
+        </div>
+    </body>
+</html>
