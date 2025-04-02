@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex Wrap & Direction</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 15%;
+                margin: 20px auto;
+                border: 2px solid #333;
+                padding: 10px;
+                height: 200px;
+                transition: all 0.5s ease;
+            }
+            .item {
+                width: 80px;
+                height: 80px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 5px;
+            }
+            .item:nth-child(1) {
+                background-color: red;
+            } /* 빨강 */
+            .item:nth-child(2) {
+                background-color: orange;
+            } /* 주황 */
+            .item:nth-child(3) {
+                background-color: yellow;
+                color: #000;
+            } /* 노랑 */
+            .item:nth-child(4) {
+                background-color: green;
+            } /* 초록 */
+            .item:nth-child(5) {
+                background-color: blue;
+            } /* 파랑 */
+            .item:nth-child(6) {
+                background-color: purple;
+            } /* 보라 */
+
+            .controls {
+                margin-top: 20px;
+            }
+            button {
+                margin: 5px;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                background-color: #007bff;
+                color: white;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+            }
+            button:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flex Wrap & Direction</h1>
+        <p>버튼을 클릭하여 flex-wrap과 flex-direction의 변화를 확인해보세요.</p>
+
+        <div class="container" id="flexContainer">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </div>
+
+        <div class="controls">
+            <h3>Flex Wrap</h3>
+            <button onclick="changeWrap('nowrap')">nowrap</button>
+            <button onclick="changeWrap('wrap')">wrap</button>
+            <button onclick="changeWrap('wrap-reverse')">wrap-reverse</button>
+
+            <h3>Flex Direction</h3>
+            <button onclick="changeDirection('row')">row</button>
+            <button onclick="changeDirection('row-reverse')">row-reverse</button>
+            <button onclick="changeDirection('column')">column</button>
+            <button onclick="changeDirection('column-reverse')">column-reverse</button>
+        </div>
+
+        <script>
+            function changeWrap(value) {
+                document.getElementById('flexContainer').style.flexWrap = value;
+            }
+
+            function changeDirection(value) {
+                document.getElementById('flexContainer').style.flexDirection = value;
+            }
+        </script>
+    </body>
+</html>
