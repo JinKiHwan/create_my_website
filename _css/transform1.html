@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Transform 속성 예제</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #f4f4f4;
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: #3498db;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 14px;
+                transition: transform 0.5s ease;
+            }
+            .controls {
+                margin-top: 20px;
+            }
+            button {
+                margin: 5px;
+                padding: 10px 15px;
+                border: none;
+                background-color: #2ecc71;
+                color: white;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: background 0.3s;
+            }
+            button:hover {
+                background-color: #27ae60;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Transform 속성</h1>
+        <p>아래 버튼을 눌러 각 Transform 속성이 어떻게 작용하는지 확인해보세요.</p>
+        <div class="container">
+            <div class="box" id="box">변환 대상</div>
+        </div>
+        <div class="controls">
+            <button onclick="applyTransform('translateX')">TranslateX(50px)</button>
+            <button onclick="applyTransform('translateY')">TranslateY(50px)</button>
+            <button onclick="applyTransform('rotate')">Rotate(45deg)</button>
+            <button onclick="applyTransform('scale')">Scale(1.5)</button>
+            <button onclick="applyTransform('skewX')">SkewX(20deg)</button>
+            <button onclick="applyTransform('skewY')">SkewY(20deg)</button>
+            <button onclick="resetTransform()">초기화</button>
+        </div>
+        <script>
+            function applyTransform(type) {
+                const box = document.getElementById('box');
+                switch (type) {
+                    case 'translateX':
+                        box.style.transform = 'translateX(50px)';
+                        break;
+                    case 'translateY':
+                        box.style.transform = 'translateY(50px)';
+                        break;
+                    case 'rotate':
+                        box.style.transform = 'rotate(45deg)';
+                        break;
+                    case 'scale':
+                        box.style.transform = 'scale(1.5)';
+                        break;
+                    case 'skewX':
+                        box.style.transform = 'skewX(20deg)';
+                        break;
+                    case 'skewY':
+                        box.style.transform = 'skewY(20deg)';
+                        break;
+                }
+            }
+            function resetTransform() {
+                document.getElementById('box').style.transform = 'none';
+            }
+        </script>
+    </body>
+</html>
