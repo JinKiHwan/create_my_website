@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS 팝업 UI</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background: #f7f8fc;
+                margin: 0;
+                padding: 60px 20px;
+                text-align: center;
+            }
+
+            h1 {
+                margin-bottom: 40px;
+            }
+
+            .btn-container {
+                display: inline-block;
+                position: relative;
+            }
+
+            .popup-trigger {
+                background: #4a90e2;
+                color: #fff;
+                border: none;
+                padding: 12px 24px;
+                font-size: 16px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            .popup {
+                position: absolute;
+                top: 120%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                padding: 20px;
+                width: 300px;
+                border-radius: 12px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+                z-index: 10;
+            }
+
+            .btn-container:hover .popup {
+                opacity: 1;
+                visibility: visible;
+                top: 110%;
+            }
+
+            .popup h2 {
+                margin-top: 0;
+                font-size: 20px;
+                color: #333;
+            }
+
+            .popup p {
+                font-size: 14px;
+                color: #666;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>팝업 UI 실습</h1>
+
+        <div class="btn-container">
+            <button class="popup-trigger">팝업 보기</button>
+            <div class="popup">
+                <h2>알림 메시지</h2>
+                <p>이것은 CSS만으로 만든 팝업입니다.<br />마우스를 버튼에 올려보세요!</p>
+            </div>
+        </div>
+    </body>
+</html>

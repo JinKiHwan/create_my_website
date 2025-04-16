@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Position 속성 실습</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                margin: 0;
+                padding: 40px 20px;
+                background-color: #f4f6f8;
+                color: #333;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            section {
+                margin-bottom: 60px;
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                margin-bottom: 10px;
+                color: #2c3e50;
+            }
+
+            p {
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+
+            .container {
+                position: relative;
+                width: 100%;
+                max-width: 500px;
+                height: 200px;
+                border: 2px dashed #ccc;
+                margin: 0 auto;
+                background-color: #fdfdfd;
+                overflow: hidden;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: #4a90e2;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+            }
+
+            .relative {
+                position: relative;
+                left: 30px;
+                top: 20px;
+            }
+
+            .absolute {
+                position: absolute;
+                left: 30px;
+                top: 20px;
+            }
+
+            .fixed {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background-color: #e94e77;
+                z-index: 999;
+            }
+
+            .label {
+                font-size: 12px;
+                margin-top: 10px;
+                color: #666;
+            }
+
+            .note {
+                font-size: 14px;
+                color: #888;
+                margin-top: 10px;
+            }
+
+            footer {
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Position 속성 실습</h1>
+
+        <!-- Relative -->
+        <section>
+            <h2>1. position: relative</h2>
+            <p>요소 자신을 기준으로 이동합니다. 일반 흐름에는 영향을 주지 않지만, 자신만 위치가 변경됩니다.</p>
+            <div class="container">
+                <div class="box relative">Relative</div>
+            </div>
+            <div class="note">이 박스는 자신의 원래 위치에서 <b>왼쪽으로 30px</b>, <b>위로 20px</b> 이동했습니다.</div>
+        </section>
+
+        <!-- Absolute -->
+        <section>
+            <h2>2. position: absolute</h2>
+            <p>가장 가까운 position이 설정된 조상 요소를 기준으로 이동합니다. 조상이 없으면 body 기준입니다.</p>
+            <div class="container">
+                <div class="box absolute">Absolute</div>
+            </div>
+            <div class="note">
+                이 박스는 부모 요소(.container)를 기준으로 <b>왼쪽 30px</b>, <b>위로 20px</b> 이동했습니다.
+            </div>
+        </section>
+
+        <!-- Fixed -->
+        <section>
+            <h2>3. position: fixed</h2>
+            <p>화면(viewport)을 기준으로 위치가 고정됩니다. 스크롤해도 위치가 유지됩니다.</p>
+            <p class="note">이 예제에서 보라색 박스를 오른쪽 아래에 고정해두었습니다. 스크롤해도 움직이지 않습니다.</p>
+        </section>
+
+        <div class="box fixed">Fixed</div>
+
+        <footer></footer>
+    </body>
+</html>
