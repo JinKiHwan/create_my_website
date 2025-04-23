@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>fixed 메뉴바</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', sans-serif;
+            }
+
+            .navbar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 15px 30px;
+                background-color: #333;
+                color: white;
+                font-size: 18px;
+                z-index: 1000;
+            }
+
+            .content {
+                padding-top: 70px;
+                padding: 70px 30px 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">📌 고정된 상단 메뉴바 (position: fixed)</div>
+
+        <div class="content">
+            <h2>스크롤을 내려보세요</h2>
+            <p>position: fixed 속성은 화면에 고정된 요소를 만들 수 있습니다.</p>
+            <p>스크롤을 해도 항상 그 자리에 위치하죠.</p>
+            <p>스크롤 스크롤 스크롤 스크롤 스크롤 스크롤...</p>
+            <p style="margin-top: 1000px">끝까지 오시느라 고생하셨습니다 :)</p>
+        </div>
+    </body>
+</html>
