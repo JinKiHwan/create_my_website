@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>JavaScript 기초 수업</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 40px;
+                background: #f0f8ff;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                padding: 20px;
+                background: #fff;
+                border: 1px solid #ccc;
+                width: 300px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript 기초 실습</h1>
+
+        <div class="box">
+            <p id="message">안녕하세요!</p>
+            <button onclick="changeMessage()">메시지 바꾸기</button>
+        </div>
+
+        <div class="box">
+            <button onclick="showAlert()">경고창 보기</button>
+        </div>
+
+        <script>
+            // 함수 1: 메시지 바꾸기
+            function changeMessage() {
+                const msg = document.getElementById('message');
+                msg.textContent = 'JavaScript 재미있어요!';
+            }
+
+            // 함수 2: alert 경고창 띄우기
+            function showAlert() {
+                alert('이 버튼을 눌렀군요!');
+            }
+
+            // 콘솔 출력 (개발자 도구에서 확인 가능)
+            console.log('페이지가 열렸습니다!');
+        </script>
+    </body>
+</html>

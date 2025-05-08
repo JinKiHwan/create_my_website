@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>변수와 함수 기초</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                padding: 40px;
+                line-height: 1.6;
+                background: #fdf6e3;
+            }
+            h1 {
+                color: #2c3e50;
+            }
+            .section {
+                margin-bottom: 40px;
+                padding: 20px;
+                background: #fff8dc;
+                border-left: 5px solid #f39c12;
+            }
+            pre {
+                background: #f4f4f4;
+                padding: 10px;
+                overflow-x: auto;
+            }
+            button {
+                margin-top: 10px;
+                padding: 8px 16px;
+                background: #3498db;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            #result {
+                margin-top: 10px;
+                font-weight: bold;
+                color: #27ae60;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>👩‍🏫 JavaScript 기초: 변수와 함수</h1>
+
+        <div class="section">
+            <h2>1. 변수란 무엇인가요?</h2>
+            <p>변수는 <strong>정보를 담는 상자</strong>와 같아요. 이름을 붙여서 나중에 다시 꺼내 쓸 수 있어요.</p>
+            <pre><code>let name = "Kihwan";
+let age = 20;</code></pre>
+            <p>이렇게 하면 <code>name</code>에는 "Kihwan"라는 이름이, <code>age</code>에는 20이라는 숫자가 저장돼요.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. 함수란 무엇인가요?</h2>
+            <p>함수는 <strong>어떤 일을 묶어서 저장해 둔 것</strong>이에요. 필요할 때 이름을 부르면 실행돼요.</p>
+            <pre><code>function sayHello() {
+  alert("안녕하세요!");
+}</code></pre>
+            <p>이렇게 만든 함수는 <code>sayHello()</code>라고 부르면 작동해요.</p>
+            <button onclick="sayHello()">sayHello() 실행하기</button>
+        </div>
+
+        <div class="section">
+            <h2>3. 변수와 함수를 함께 써보기</h2>
+            <p>사용자가 입력한 이름으로 인사하는 예제입니다.</p>
+            <input type="text" id="username" placeholder="이름을 입력하세요" />
+            <button onclick="greetUser()">인사하기</button>
+            <div id="result"></div>
+        </div>
+
+        <script>
+            // 함수 예제
+            function sayHello() {
+                alert('안녕하세요!');
+            }
+
+            // 입력값을 받아 인사하는 함수
+            function greetUser() {
+                const name = document.getElementById('username').value;
+                const result = document.getElementById('result');
+                result.textContent = name + '님, 만나서 반가워요!';
+            }
+        </script>
+    </body>
+</html>
