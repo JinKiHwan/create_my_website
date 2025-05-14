@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Swiper 구성하기</title>
+        <!-- Swiper 스타일 CDN -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f0f2f5;
+                padding: 40px;
+            }
+
+            h1 {
+                color: #2c3e50;
+            }
+
+            section {
+                margin-bottom: 40px;
+            }
+
+            pre {
+                background: #fff;
+                padding: 15px;
+                border-left: 5px solid #3498db;
+                overflow-x: auto;
+                white-space: pre-wrap;
+            }
+
+            /* Swiper 기본 스타일 */
+            .swiper {
+                width: 100%;
+                max-width: 600px;
+                height: 300px;
+                border-radius: 8px;
+                overflow: hidden;
+                margin-top: 20px;
+            }
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #3498db;
+                color: white;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>🧭 Swiper.js 구성하는 법</h1>
+
+        <section>
+            <h2>1단계: Swiper CSS & JS CDN 추가</h2>
+            <pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>2단계: HTML 구조 만들기</h2>
+            <pre><code>&lt;div class="swiper"&gt;
+  &lt;div class="swiper-wrapper"&gt;
+    &lt;div class="swiper-slide"&gt;슬라이드 1&lt;/div&gt;
+    &lt;div class="swiper-slide"&gt;슬라이드 2&lt;/div&gt;
+    &lt;div class="swiper-slide"&gt;슬라이드 3&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- 페이징 & 네비게이션 --&gt;
+  &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+  &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+  &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </section>
+
+        <section>
+            <h2>3단계: Swiper 초기화</h2>
+            <pre><code>const swiper = new Swiper('.swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});</code></pre>
+        </section>
+
+        <section>
+            <h2>👀 실제 결과</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">슬라이드 1</div>
+                    <div class="swiper-slide">슬라이드 2</div>
+                    <div class="swiper-slide">슬라이드 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+
+        <!-- Swiper 스크립트 -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        </script>
+    </body>
+</html>
